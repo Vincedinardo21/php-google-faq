@@ -72,11 +72,10 @@
         <ul>
             <?php
                 foreach($testi as $domande => $risposteList){?>
-                    <li>
                         <h2><?= $domande ?></h2>
-                            <ul><?php
+                            <?php
                                 foreach($risposteList as $risposte){
-                                    echo "<li>$risposte</li>";?>
+                                    echo "<p>$risposte</p>";?>
                                     <ol><?php
                                         foreach($risposte as $intList){
                                             echo "<li>$intList</li>";?>
@@ -86,11 +85,9 @@
                                                 }?>
                                             </ol><?php
                                         }?>
-                                    </ol><?php
-                                    
-                                }?>
-                            </ul>
-                    </li><?php           
+                                    </ol><?php   
+                                }?>       
+                    <?php           
                 }
             ?>
         </ul>
