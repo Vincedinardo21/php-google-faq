@@ -52,22 +52,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Faq</title>
 </head>
 <body>
-    <ul>
-        <?php
-            foreach($testi as $domande => $risposteList){?>
-                <li>
-                    <h2><?= $domande ?></h2>
-                    <ul><?php
-                        foreach($risposteList as $risposte){
-                        echo "<li>$risposte</li>";
-                        }?>
-                    </ul>
-                </li><?php           
-            }
-        ?>
-    </ul>
+    <div class="container">
+        <ul>
+            <?php
+                foreach($testi as $domande => $risposteList){?>
+                    <li>
+                        <h2><?= $domande ?></h2>
+                            <ul><?php
+                                foreach($risposteList as $risposte){
+                                    echo "<li>$risposte</li>";
+                                }?>
+                            </ul>
+                    </li><?php           
+                }
+            ?>
+        </ul>
+    </div>
 </body>
 </html>
