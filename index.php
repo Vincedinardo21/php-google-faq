@@ -29,8 +29,15 @@
         //Domanda 3
         "Perché il mio account è associato a un paese?" => [
             // Array contenente le risposte
-            "Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:" => [
+            "Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:", 
+            [
                 "La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:",
+
+                [
+                    "Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.",
+
+                    "Google LLC, con sede negli Stati Uniti, per il resto del mondo.",
+                ],
 
                 "La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.",
             ],
@@ -72,7 +79,12 @@
                                     echo "<li>$risposte</li>";?>
                                     <ol><?php
                                         foreach($risposte as $intList){
-                                            echo "<li>$intList</li>";
+                                            echo "<li>$intList</li>";?>
+                                            <ol><?php
+                                                foreach($intList as $intIntList){
+                                                    echo "<li>$intIntList</li>";
+                                                }?>
+                                            </ol><?php
                                         }?>
                                     </ol><?php
                                     
